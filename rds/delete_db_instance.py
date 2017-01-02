@@ -5,12 +5,12 @@
 import sys
 import boto3
 
-# create an rds client
-rds = boto3.client('rds')
-
 # use the first argument to the script as the name
 # of the instance to be deleted
 db = sys.argv[1]
+
+# create an rds client
+rds = boto3.client('rds')
 
 try:
     # delete the instance and catch the response
